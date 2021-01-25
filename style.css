@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2? family = Poppins: wght @ 300; 400; 500; 600; 700; 800; 900 & display = swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    /*Fundo da Tela*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0a0a0a;
+}
+
+.container{
+    /*Configurando o container*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    width: 1200px;
+    transform-style: preserve-3d; /*para o efeito de 3D*/
+}
+
+.container .box{
+    /*Configurando os Box dos cards*/
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+
+}
+
+.container .box::before{
+   
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.container .box::after{
+    content: url('https://fontmeme.com/permalink/210125/efd9b238a02a5d069bc93dbc590c93af.png');
+    bottom: 20px;
+    opacity: 0.5;
+    transition: 0.05s;
+   
+    
+
+}
+
+.container .box:hover::before,
+.container .box:hover::after{
+    opacity: 0;
+
+}
+
+.container .box .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+
+
+}
+.container .box:hover .name{
+    top: 40px;
+    opacity: 1;
+
+
+}
+.container .box .buy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%,0,75px);
+    color: rgb(14, 13, 13);
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+
+}
+.container .box:hover .buy{
+    bottom: 30px;
+    opacity: 1;
+
+}
+.container .box .circle{
+    content: url('https://assets.stickpng.com/images/580b57fcd9996e24bc43c31e.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius:50% ;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,50px);
+    z-index: 100;
+    opacity: 1;
+
+}
+
+.container .box .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,0px) rotate(-15deg);
+
+}
+.container .box:hover .product{
+    transform: translate3d(-50%,-50%,100px) rotate(-15deg);
+
+
+}
+
+
+.container .box:nth-child(1) .buy{
+ background: #f8e218;
+    
+
+}
+.container .box:nth-child(2) .buy{
+    background: #ca0101;
+
+}
+.container .box:nth-child(3) .buy{
+    background: #a9f088;
+
+}
+.container .box:nth-child(4) .buy{
+ background: #c85ea5;
+    
+
+}
+.container .box:nth-child(5) .buy{
+    background: #32a5e7;
+
+}
+.container .box:nth-child(6) .buy{
+    background: #a9f088;
+
+}
