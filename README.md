@@ -1,2 +1,2 @@
-# TreinandoImagens-3D
+# TreinandoEfeitos3D
 Criando cards de pokémons e usando efeitos 3D
